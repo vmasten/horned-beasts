@@ -15,3 +15,15 @@ Finish time: 4:03pm
 Actual time needed to complete: 88 mins
 
 ## Feature Number 2
+Estimate of time needed to complete: 30-60 mins
+
+Start time: 4:33pm
+
+Finish time: 4:54pm
+
+Actual time needed to complete: 21 mins
+
+## Feature Number 3
+Estimate of time needed to complete: 30 mins
+
+Start time: 4:55pm
