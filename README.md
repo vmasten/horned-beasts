@@ -1,5 +1,5 @@
 # Horned Beasts v2
-A very basic app that will eventually display a variety of horned beasts. Currently displays my own animals.
+A very basic React app that displays a variety of horned beasts. 
 
 Made with create-react-app by Vince Masten
 
