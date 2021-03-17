@@ -2,11 +2,7 @@ import React from 'react';
 import Header from './header';
 import Footer from './footer';
 import Main from './main';
-import data from './data/data.json';
-
-const titleArray = data.map(data => data.title);
-console.log(titleArray)
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
