@@ -1,5 +1,5 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col'
+import Card from 'react-bootstrap/Card'
 
 class HornedBeast extends React.Component{
 
@@ -18,12 +18,12 @@ class HornedBeast extends React.Component{
 
   render() {
     return(
-      <Col xs={3} md={4}>
+      <Card>
       <h2>{this.props.title}</h2>
       <img onClick={this.voteForHornedBeast} src={this.props.source} alt={this.props.alt} width="400" />
       <p>❤️: {this.state.numberOfVotes}</p>
       <p>{this.props.description}</p>
-      </Col>
+      </Card>
     )
 }
 }
