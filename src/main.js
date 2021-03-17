@@ -1,14 +1,14 @@
 import React from 'react';
 import HornedBeast from './HornedBeast'
 import data from './data/data.json'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
+import CardColumns from 'react-bootstrap/CardColumns'
+
 
 class Main extends React.Component{
   render() {
     return(
-      <Container>
-        <Row md={4}>
+      <div>
+      <CardColumns>
       {data.map(data => (
 
         <HornedBeast title={data.title} 
@@ -17,8 +17,8 @@ class Main extends React.Component{
               description={data.description} />
 
       ))}
-        </Row>
-      </Container>
+        </CardColumns>
+        </div>
     );
   }
 }
