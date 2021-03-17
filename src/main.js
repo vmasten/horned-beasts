@@ -9,13 +9,13 @@ class Main extends React.Component{
     return(
       <div>
       <CardColumns>
-      {data.map(data => (
-
+      {data.map((data, index) => (
+        <div key={index}>
         <HornedBeast title={data.title} 
               source={data.image_url} 
               alt={data.keyword} 
               description={data.description} />
-
+          </div>
       ))}
         </CardColumns>
         </div>
