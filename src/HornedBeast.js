@@ -10,22 +10,28 @@ class HornedBeast extends React.Component{
     }
   }
 
-  rowCounter = 0;
-
   voteForHornedBeast = () => {
     this.setState({numberOfVotes: this.state.numberOfVotes + 1})
   }
 
+  doModal = () => {
+    console.log('in do modal')
+    this.props.showModal(this.props.index);
+  }
+
   render() {
     return(
-      <Card>
-      <h2>{this.props.title}</h2>
-      <img onClick={this.voteForHornedBeast} src={this.props.source} alt={this.props.alt} width="400" />
-      <p>❤️: {this.state.numberOfVotes}</p>
-      <p>{this.props.description}</p>
+      <div>
+      <Card bg='dark' text='light'>
+      <Card.Img onClick={this.doModal} src={this.props.source} alt={this.props.alt}/>
+      <Card.Body onClick={this.voteForHornedBeast}>
+      <Card.Text> ❤️ : {this.state.numberOfVotes} </Card.Text>
+      <Card.Text>{this.props.description}</Card.Text>
+      </Card.Body>
       </Card>
+      </div>
     )
 }
 }
 
-export default HornedBeast
+export default HornedBeast;

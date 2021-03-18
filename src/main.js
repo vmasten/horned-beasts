@@ -13,7 +13,10 @@ class Main extends React.Component{
         <div key={index}>
         <HornedBeast title={data.title} 
               source={data.image_url} 
-              alt={data.keyword} 
+              alt={data.keyword}
+              key={index}
+              index={index}
+              showModal = {this.props.showModal}
               description={data.description} />
           </div>
       ))}
