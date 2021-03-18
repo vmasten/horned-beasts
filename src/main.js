@@ -1,6 +1,5 @@
 import React from 'react';
 import HornedBeast from './HornedBeast'
-import data from './data/data.json'
 import CardColumns from 'react-bootstrap/CardColumns'
 
 
@@ -9,7 +8,7 @@ class Main extends React.Component{
     return(
       <div>
       <CardColumns>
-      {data.map((data, index) => (
+      {this.props.cards.map((data, index) => (
         <div key={index}>
         <HornedBeast title={data.title} 
               source={data.image_url} 
