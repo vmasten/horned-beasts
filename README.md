@@ -41,7 +41,6 @@ Finish time: 8:59pm
 
 Actual time needed to complete: 4 mins
 
-
 ## 03.17
 
 ### Feature Number 1
@@ -52,3 +51,4 @@ Start time: 4:20pm
 Finish time: 9:36pm
 
 Actual time needed to complete: many hours (and would've been longer without help from classmates)
+
