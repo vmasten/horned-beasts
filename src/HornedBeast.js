@@ -15,7 +15,6 @@ class HornedBeast extends React.Component{
   }
 
   doModal = () => {
-    console.log('in do modal')
     this.props.showModal(this.props.index);
   }
 
