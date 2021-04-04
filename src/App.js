@@ -12,21 +12,30 @@ class App extends React.Component{
     super(props);
     this.state = {
       beastData: data,
+      filteredBeasts: data,
       displayModal: false,
       favoriteBeast: {},
-      numberOfHorns: ''
+      numberOfHorns: 'All'
     };
   }
 
   setHorns = (horns) => {
     this.setState({ numberOfHorns: horns})
-    console.log(this.state.numberOfHorns)
-  }
+    const newData = this.state.beastData.filter((beast) => {
+      if (horns === 'All') {
+        return beast;
+      } else {
+        return beast.horns === +horns;
+      }
+    });
+    
+    this.setState({filteredBeasts: newData})
+    }
+  
 
-  handleSelect = (e) => {
-    this.setHorns(e);
-    console.log(e)
-  }
+  // handleSelect = (e) => {
+  //   this.setHorns(e.target.value);
+  // }
 
   showModal = (index) => {
     this.setState({ favoriteBeast: this.state.beastData[index],
@@ -38,6 +47,8 @@ class App extends React.Component{
   }
 
 
+
+
   render() {
 
   return (
@@ -45,10 +56,12 @@ class App extends React.Component{
       <Header />
 
       <DropdownInfo
-        setHorns={this.handleSelect}/>
+        setHorns={this.setHorns}
+        horns={this.state.numberOfHorns}/>
       <Main 
+        horns={this.state.numberOfHorns}
         showModal={this.showModal}
-        cards={this.state.beastData}/>
+        cards={this.state.filteredBeasts}/>
         <SelectedBeast
         showModal={this.state.showAsModal}
         closeModal={this.closeModal}
